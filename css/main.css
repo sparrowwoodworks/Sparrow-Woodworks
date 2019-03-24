@@ -1,0 +1,764 @@
+* { /*everything*/
+	box-sizing: border-box; /* makes padding part of the width */
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 .h6 {
+	font-weight: 800;
+	margin-bottom: 2rem;
+	padding-top: 30px;
+}
+
+h1, .h1 { font-size: 4rem; }
+h2, .h2 { font-size: 3rem; }
+h3, .h3 { font-size: 2.5rem; }
+h4, .h4 { font-size: 2rem; }
+h5, .h5 { font-size: 1.5rem; }
+h6, .h6 { font-size: 1rem; }
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+a {
+	color: grey;
+}
+
+a:hover {
+	color: grey;
+	text-decoration: none;
+}
+
+body.open,
+body.overlay {
+	overflow: hidden;
+}
+
+.form-control {
+  border-radius: 2px;
+  padding: 20px 15px;
+}
+
+.btn-ghost {
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 2px;
+  padding: 15px 30px;
+  margin: 15px 0;
+}
+
+.slick-arrow {
+  display: none;
+}
+
+.pic_logo {
+	width: 0;
+	height: 0;
+	position: absolute;
+	float: left;
+  margin-top: -5px;
+}
+
+.image-icon {
+	display: none;
+}
+
+header {
+	color: grey;
+	font-family: 'Anton', sans-serif;
+  /* overflow: hidden */
+  border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+	margin-top: 20px;
+  margin-left: 3.25rem;
+  font-size: 2rem;
+}
+
+img-responsive {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo-img {
+  background: red;
+  padding: 10px;
+	display: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.pic-sww_logo_1 {
+	width: 550px;
+	height: 440px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	display: none;
+}
+
+.pic-center {
+	width: 300px;
+	height: 300px;
+}
+
+.pic-main {
+	width: 650px;
+	height: 450px;
+}
+
+.pic-whiskyrack_1 {
+	display: block;
+	padding-right: 30px;
+	margin-top: 40px;
+}
+
+.pic-nightstands_1 {
+	display: block;
+	padding-top: 40px;
+}
+
+nav {
+	background: darkgrey;
+	/* padding: 15px 0 0 0; */ /* top right bottom left  (clockwise) */
+	/* padding: 15px 0; */ /* top/bottom  left/right */
+	padding: 15px;
+	position: fixed;
+	left: 100%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition: all .25s ease;
+	opacity: 0;
+	z-index: 100;
+}
+
+nav.open { /* styles for navbar when opened */
+	left: 0;
+	transition: all .25s ease;
+	opacity: 1;
+}
+
+nav.open ul {
+	opacity: 1;
+	transition: all .5s ease;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	opacity: 0;
+	transition: all .5s ease;
+}
+
+nav ul li a {
+	padding: 15px;
+	display: block;
+	font-size: 2.5rem;
+	color: white;
+}
+
+#mobile-icon {
+	z-index: 101;
+}
+
+#mobile-icon.open span {
+	background: white;
+}
+
+/*nav #mobile-icon {
+	position: absolute;
+	background: red;
+	top: 0;
+	right: 0;
+	height: 60px;
+	width: 60px;
+}*/
+
+.slideshow,
+.slick-list,
+.slick-slider {
+	height: 50vh; /* vh is viewport height */
+	width: 100%;
+}
+
+.slick-track,
+.slick-slide {
+	height: 100%;
+}
+
+.slideshow img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* take up as much space as you can */
+	object-position: 50% 50%; /* center the image */
+}
+
+.slick-prev,
+.slick-next {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	background: #444242;
+	border: none;
+	border-radius: 50%;
+	padding: 5px 11px;
+}
+
+.slick-prev:focus,
+.slick-next:focus {
+	outline: none;
+}
+
+.slick-prev svg,
+.slick-next svg {
+	color: #fff;
+}
+
+.slick-prev {
+	left: 10px;
+}
+
+.slick-next {
+	right: 10px;
+}
+
+.slick-slide {
+  position: relative;
+}
+
+.slideshow .caption {
+  position: absolute;
+  color: #fff;
+  font-weight: 900;
+  top: 50%;
+  margin-top: -10%;
+  left: 30%;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 5px;
+  padding: 1.5rem 3rem;
+  width: 60%;
+  display: inline-block;
+}
+
+.slideshow .caption a {
+  width: 70%;
+  margin: 15px 0;
+}
+
+.slideshow .caption p {
+  font-size: 1.5rem;
+}
+
+.slideshow .caption p:first-child {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.section {
+	padding: .2rem 15px;
+}
+
+.section:nth-child(even) {
+	background-color: #f7f7f7;
+}
+
+#photos {
+  opacity: .88;
+}
+
+#photos img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 30px;
+  border-radius: 5px;
+	padding-top: 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0px auto;
+  padding: 0px;
+  display: block;
+  max-width: 780px;
+  text-align: left;
+}
+
+#overlay {
+  background: rgba(0,0,0, .85);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+  z-index: 1000;
+}
+
+#overlay img {
+  margin: 0 auto 0 auto;
+  position: relative;
+  top: 5%;
+  max-height: 90%;
+  width: auto;
+  max-width: 90%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+#photos {
+  width: 100%;
+}
+
+#photo-gallery {
+  width: 100%;
+}
+
+.section.cta {
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b78e67+0,b2865c+44,a8794e+100 */
+	background: #b78e67; /* Old browsers */
+	background: -moz-linear-gradient(left, #b78e67 0%, #b2865c 44%, #a8794e 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #b78e67 0%,#b2865c 44%,#a8794e 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #b78e67 0%,#b2865c 44%,#a8794e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b78e67', endColorstr='#a8794e',GradientType=1 ); /* IE6-9 */
+
+	/*
+	background: #000c8e;
+	background: -moz-linear-gradient(left, #000c8e 0%, #4180ff 100%);
+	background: -webkit-linear-gradient(left, #000c8e 0%,#4180ff 100%);
+	background: linear-gradient(to right, #000c8e 0%,#4180ff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000c8e', endColorstr='#4180ff',GradientType=1 );
+	color: #fff;
+	*/
+	text-align: center;
+}
+
+.section.cta .btn {
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 15px 30px;
+	margin-top: 15px;
+	border-radius: 2px;
+	margin-bottom: 20px;
+}
+
+.section.cta .btn:hover {
+	background-color: rgba(225,225,225,.2);
+}
+
+.section.services img {
+  height: 100px;
+  width: auto: ;
+  display: block;
+  margin: 30px auto;
+}
+
+.bkg-header {
+	background-size: cover !important; /* do it's best to fill in the element with the background image */
+}
+
+	#about {
+	background: url('../images/woodworking_unsplash_2.jpg')center;
+	/* Photo by Keith Misner on Unsplash */
+	color: #fff;
+	padding: 6.5rem 1rem;
+}
+
+	#example {
+	background: url('../images/woodworking_unsplash_1.jpg')center;
+	/* Photo by Dominik Scythe on Unsplash */
+	color: #fff;
+	padding: 5rem 1rem;
+}
+
+  #service {
+  background: url('../images/woodworking_unsplash_6.jpg')center;
+	/* Photo by Hudson Hintze on Unsplash */
+  color: #fff;
+  padding: 5rem 1rem;
+}
+
+	#product {
+	background: url('../images/woodworking_unsplash_5.jpg')center;
+	/* Photo by Daniel McCullough on Unsplash */
+	color: #fff;
+	padding: 5rem 1rem;
+}
+
+footer {
+	padding: 15px;
+	background: #555;
+}
+
+footer p {
+	text-align: center;
+	margin: 0;
+	color: #f2f2f2
+}
+
+/* SMALL (sm) devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	/* logo */
+
+	.logo-icon {
+		display: block;
+		background: white;
+		padding: 5px;
+		border-radius: 5px;
+		overflow: hidden;
+		width: 110px;
+		position: absolute;
+		z-index: 9999;
+		border: 2px solid #616161;
+		/* box-shadow: 0 0 5px 1px #222222; */
+		margin-top: 4px;
+	}
+
+	.logo-icon a {
+		display: block;
+		width: 110px;
+		height: 75px;
+		position: relative;
+	}
+
+	.logo-icon a img {
+		width: 100%;
+		height: auto;
+		margin: -2px 0 0 -7px;
+	}
+
+	nav {
+		width: 50%;
+	}
+
+  header h1 {
+    margin-left: 13rem;
+  	margin-top: 15px;
+  	font-size: 2.5rem;
+  }
+
+  .pic_logo {
+  	margin-top: 12px;
+  }
+
+	nav.open {
+		left: 50%;
+	}
+
+  .slick-arrow {
+    display: block;
+  }
+
+	.btn-ghost {
+	  color: #000;
+	  border: 1px solid #000;
+	  border-radius: 2px;
+	  padding: 15px 5px;
+	  margin: 15px 0;
+		font-size: 1rem;
+	}
+
+	.pic-sww_logo_1 {
+		width: 400px;
+		height: 300px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 100px;
+	}
+}
+/* MEDIUM (md) devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	header h1 {
+		margin-top: 10px;
+		font-size: 3rem;
+	}
+
+	#mobile-icon {
+		display: none
+	}
+
+	.logo {
+		width: 40%;
+	}
+
+	nav {
+		position: static;
+		opacity: 1;
+		height: auto;
+		background-color: transparent;
+		width: 59%;
+	}
+
+	nav ul {
+		opacity: 1;
+	}
+
+	nav ul li,
+	nav ul li a {
+		display: inline;
+	}
+
+	nav ul {
+		text-align: right;
+		margin-top: 50px;
+	}
+
+	nav ul li a {
+		color: grey;
+		padding: 0;
+		font-size: 1.5rem;
+		padding: 0 10px;
+	}
+
+	.logo,
+	nav {
+		float: left;
+	}
+
+	.logo-icon {
+		margin-top: 50px;
+		height: 100px	;
+	}
+
+	.logo-icon a img {
+		width: 100%;
+		height: auto;
+		margin: -2px 0 0 -7px;
+	}
+
+	.slideshow,
+	.slick-list,
+	.slick-slider {
+		height: 75vh; /* vh is viewport height */
+	}
+
+  .slideshow .caption {
+    position: absolute;
+    width: 50%;
+    top: 70%;
+    left: 40%;
+  }
+
+  .slideshow .caption p {
+    font-size: 1.75rem;
+  }
+
+  .slideshow .caption p:first-child {
+    font-size: 3rem;
+  }
+
+	.pic-sww_logo_1 {
+		width: 500px;
+		height: 400px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 100px;
+	}
+}
+
+/* LARGE (lg) devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+	nav ul li a {
+		color: grey;
+		font-size: 1.5rem;
+		padding: 20px;
+	}
+
+	.logo,
+	nav {
+		float: left;
+		padding-top: 20px;
+	}
+
+	.logo-icon {
+		margin-top: 30px;
+		height: 100px	;
+	}
+
+  .slideshow .caption {
+    position: absolute;
+    color: #fff;
+    font-weight: 900;
+    top: 65%;
+    margin-top: -10%;
+    left: 55%;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    padding: 1.5rem 3rem;
+    width: 40%;
+    display: inline-block;
+  }
+
+  .slideshow .caption a {
+    width: 50%;
+    margin: 15px 0;
+  }
+
+  .slideshow .caption p {
+    font-size: 2rem;
+  }
+
+  .slideshow .caption p:first-child {
+    font-size: 5rem;
+    font-weight: 900;
+  }
+
+	.btn-ghost {
+		color: #000;
+		border: 1px solid #000;
+		border-radius: 2px;
+		padding: 15px 5px;
+		margin: 15px 0;
+		font-size: 1.5rem;
+	}
+}
+
+
+
+/* timeline
+--------------------- */
+.timeline-section {
+    background-color: #ccc;
+    font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 10rem auto 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container-timeline {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container-timeline::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -12px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .container-timeline {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .container-timeline::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
